@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "RestaurantedoClebinho"
+    }
+  },
+  "defaultProject": "RestaurantedoClebinho",
+  "cli": {
+    "analytics": "4bbc351f-136f-40f1-8e92-5ee67c68bbbf"
+  }
 }
