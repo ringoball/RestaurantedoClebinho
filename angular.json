@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "RestaurantedoClebinho": {
+    "trabalhofinalcom222": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/RestaurantedoClebinho",
+            "outputPath": "dist/trabalhofinalcom222",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,7 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/font-awesome/css/font-awesome.css"
             ],
             "scripts": []
           },
@@ -62,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "RestaurantedoClebinho:build"
+            "browserTarget": "trabalhofinalcom222:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "RestaurantedoClebinho:build:production"
+              "browserTarget": "trabalhofinalcom222:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "RestaurantedoClebinho:build"
+            "browserTarget": "trabalhofinalcom222:build"
           }
         },
         "test": {
@@ -110,18 +111,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "RestaurantedoClebinho:serve"
+            "devServerTarget": "trabalhofinalcom222:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "RestaurantedoClebinho:serve:production"
+              "devServerTarget": "trabalhofinalcom222:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "RestaurantedoClebinho",
+  "defaultProject": "trabalhofinalcom222",
   "cli": {
     "analytics": "4bbc351f-136f-40f1-8e92-5ee67c68bbbf"
   }

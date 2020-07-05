@@ -1,43 +1,59 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top ">
-  <div class="container">
-    <a class="navbar-brand mx-auto" href="#">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/domingo">Domingo</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/segunda">Segunda-feira</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/terca">Terça-feira</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/quarta">Quarta-feira</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/quinta">Quinta-feira</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/sexta">Sexta-feira</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/sabado">Sábado</a>
-          </li>
-        </ul>
-      </div>
-    </a>
+<nav>
+  <div class="navbar">
+    Restaurante
   </div>
 </nav>
 
+<div class="page-container">
+  <div class="option-container">
+    <div class="option-title">
+      <h1 style="font-weight: 400;">Refeição</h1>
+    </div>
+    <div routerLink="/home" class="option-body">
+      <div>
+        <h4 style="font-weight: 400;">Refeição</h4>
+        <p>Monte seu prato com as opções do dia</p>
+        <p style="font-weight: bold;">R$20.00</p>
+      </div>
+      <div style="display:flex">
+        <img src="../assets/refeicao.jpg">
+      </div>
+    </div>
 
-<div class="myDiv container-fluid p-3 mb-2 bg-secondary text-white ">
+  </div>
 
-  <h1>Restaurante do Clebinho</h1>
-  <router-outlet></router-outlet>
-
-</div>
+  <div class="option-container">
+    <div class="option-title">
+      <h1 style="font-weight: 400;">Bebidas</h1>
+    </div>
+    <div class="option-body">
+      <div>
+        <h4 style="font-weight: 400;">Água</h4>
+        <p></p>
+        <p style="font-weight: bold;">R$2.00</p>
+      </div>
+      <div>
+        <img src="../assets/aguas.jpg">
+      </div>
+    </div>
+    <div class="option-body">
+      <div>
+        <h4 style="font-weight: 400;">Suco</h4>
+        <p></p>
+        <p style="font-weight: bold;">R$4.00</p>
+      </div>
+      <div>
+        <img src="../assets/suco.jpg">
+      </div>
+    </div>
+    <div class="option-body">
+      <div>
+        <h4 style="font-weight: 400;">Refrigerante</h4>
+        <p>Lata</p>
+        <p style="font-weight: bold;">R$3.50</p>
+      </div>
+      <div>
+        <img src="../assets/refri.jpg">
+      </div>
+    </div>
+  </div>

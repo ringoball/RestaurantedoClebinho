@@ -1,33 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { DomingoComponent } from './domingo/domingo.component';
-import { SegundaComponent } from './segunda/segunda.component';
-import { TercaComponent } from './terca/terca.component';
-import { QuartaComponent } from './quarta/quarta.component';
-import { QuintaComponent } from './quinta/quinta.component';
-import { SextaComponent } from './sexta/sexta.component';
-import { SabadoComponent } from './sabado/sabado.component';
+import { HomeComponent } from './views/Home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DomingoComponent,
-    SegundaComponent,
-    TercaComponent,
-    QuartaComponent,
-    QuintaComponent,
-    SextaComponent,
-    SabadoComponent
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
     FontAwesomeModule
   ],
