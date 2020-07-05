@@ -11,7 +11,9 @@ img {
 .navbar {
   margin: 0;
   padding: 0;
+  position: fixed;
   height:60px;
+  width:100%;
   background-color: bisque;
   text-align: center;
   vertical-align: middle;
