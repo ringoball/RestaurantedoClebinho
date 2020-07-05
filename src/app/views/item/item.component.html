@@ -1,0 +1,19 @@
+<div class="page-container">
+  <div class="center-container">
+    <div class="title-container">
+      <i (click)="goBack()" class="fa">&#xf060;</i>
+      <span class="title">DETALHE DO PRODUTO</span>
+    </div>
+    <div class="image-container">
+      <img src="../../../assets/{{item.imageUrl}}.jpg">
+    </div>
+    <div class="description">
+      <h4 style="font-weight: 300;">{{item.name}}</h4>
+      <p style="padding-left: 10px; color:rgb(145, 145, 145)">{{item.description}}</p>
+      <p style="font-weight: 600;">R${{item.price}}</p>
+    </div>
+    <div class="button-container">
+      <button> Adicionar </button>
+    </div>
+  </div>
+</div>

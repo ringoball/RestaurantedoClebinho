@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Cardapio } from '../../interfaces/Cardapio';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,7 +10,19 @@ import { Cardapio } from '../../interfaces/Cardapio';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { console.log('werghjhgdfsa') }
+  constructor(private router: Router) { }
+
+  showDetails = async (item) => {
+    await this.router.navigate(['item'], {
+      queryParams: {
+        item,
+      }
+    })
+  }
+
+  chooseMeal = () => {
+    console.log('meal');
+  }
 
   ngOnInit(): void {
   }

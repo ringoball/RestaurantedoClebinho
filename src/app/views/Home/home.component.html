@@ -1,3 +1,103 @@
+<nav>
+  <div class="navbar">
+    Restaurante
+  </div>
+</nav>
+
+<!-- Refeição -->
+<div class="page-container">
+  <div class="option-container">
+    <div class="option-title">
+      <h1 style="font-weight: 400;">Refeição</h1>
+    </div>
+    <div (click)="chooseMeal()" class="option-body">
+      <div>
+        <h4 style="font-weight: 400;">Refeição</h4>
+        <p>Monte seu prato com as opções do dia</p>
+        <p style="font-weight: bold;">R$20.00</p>
+      </div>
+      <div style="display:flex">
+        <img src="../assets/refeicao.jpg">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Bebidas -->
+  <div class="option-container">
+    <div class="option-title">
+      <h1 style="font-weight: 400;">Bebidas</h1>
+    </div>
+    <div (click)="showDetails('agua')" class="option-body">
+      <div>
+        <h4 style="font-weight: 400;">Água</h4>
+        <p></p>
+        <p style="font-weight: bold;">R$2.00</p>
+      </div>
+      <div>
+        <img src="../assets/agua.jpg">
+      </div>
+    </div>
+    <div (click)="showDetails('suco')" class="option-body">
+      <div>
+        <h4 style="font-weight: 400;">Suco</h4>
+        <p>Natural</p>
+        <p style="font-weight: bold;">R$4.00</p>
+      </div>
+      <div>
+        <img src="../assets/suco.jpg">
+      </div>
+    </div>
+    <div (click)="showDetails('refrigerante')" class="option-body">
+      <div>
+        <h4 style="font-weight: 400;">Refrigerante</h4>
+        <p>Lata</p>
+        <p style="font-weight: bold;">R$3.50</p>
+      </div>
+      <div>
+        <img src="../assets/refrigerante.jpg">
+      </div>
+    </div>
+  </div>
+
+  <!-- Sobremesas -->
+  <div class="option-container">
+    <div class="option-title">
+      <h1 style="font-weight: 400;">Sobremesas</h1>
+    </div>
+    <div (click)="showDetails('cheesecake')" class="option-body">
+      <div>
+        <h4 style="font-weight: 400;">Cheesecake</h4>
+        <p>Pedaço</p>
+        <p style="font-weight: bold;">R$6.00</p>
+      </div>
+      <div>
+        <img src="../assets/cheesecake.jpg">
+      </div>
+    </div>
+    <div (click)="showDetails('sundae')" class="option-body">
+      <div>
+        <h4 style="font-weight: 400;">Sundae</h4>
+        <p>Taça - Nos sabores de Creme, Chocolate e Morango</p>
+        <p style="font-weight: bold;">R$6.00</p>
+      </div>
+      <div>
+        <img src="../assets/sundae.jpg">
+      </div>
+    </div>
+    <div (click)="showDetails('torta')" class="option-body">
+      <div>
+        <h4 style="font-weight: 400;">Torta de Maçã</h4>
+        <p>Pedaço - Feita na hora</p>
+        <p style="font-weight: bold;">R$5.50</p>
+      </div>
+      <div>
+        <img src="../assets/torta.jpg">
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- <form>
   <div>
     <h5>Opções de arroz e feijão (1 ou 2 opções)</h5>
