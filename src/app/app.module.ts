@@ -12,6 +12,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ItemComponent } from './views/Item/item.component';
 import { CartComponent } from './views/Cart/cart.component';
 import { Api } from './helpers/ApiHelper';
+import { AdminComponent } from './views/Admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { Api } from './helpers/ApiHelper';
     HomeComponent,
     ItemComponent,
     CartComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

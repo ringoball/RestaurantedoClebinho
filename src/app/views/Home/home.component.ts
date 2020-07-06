@@ -33,5 +33,9 @@ export class HomeComponent implements OnInit {
     console.log('meal');
   }
 
+  goToAdminPage = async () => {
+    await this.router.navigate(['admin']);
+  }
+
 
 }
