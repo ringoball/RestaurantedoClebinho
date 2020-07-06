@@ -26,7 +26,7 @@ export {
 
 export {
   Arroz as arroz,
-  ArrozIntegral as arrozIntegral,
+  ArrozIntegral as arrozintegral,
   Feijao as feijao,
   Frango as frango,
   Maminha as maminha,

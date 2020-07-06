@@ -85,8 +85,11 @@ export class CartComponent implements OnInit {
       let doesItAppear = false;
       for (let j = 0; j < unyfiedCart.length; j++) {
         if (unyfiedCart[j].name === cart[i].name) {
-          unyfiedCart[j].quantity++;
-          doesItAppear = true;
+          if (!(cart[i].category === 'refeicoes' && !(unyfiedCart[j].description === cart[i].description))) {
+            unyfiedCart[j].quantity++;
+            doesItAppear = true;
+
+          }
         }
       }
       if (!doesItAppear) {

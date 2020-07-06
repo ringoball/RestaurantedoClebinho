@@ -1,3 +1,3 @@
 import Menu from './Menu';
 
-export default new Menu('Arroz Integral', 'Grãos selecionados', 'arrozIntegral', 'principal');
+export default new Menu('Arroz Integral', 'Grãos selecionados', 'arrozintegral', 'principal');

@@ -18,7 +18,7 @@ export class AdminComponent implements OnInit {
     acompanhamentos: [],
   };
 
-  principal = ['arroz', 'feijao', 'arrozIntegral'];
+  principal = ['arroz', 'feijao', 'arrozintegral'];
   carnes = ['maminha', 'picanha', 'frango'];
   acompanhamentos = ['farofa', 'fritas', 'salada'];
 

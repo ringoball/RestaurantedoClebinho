@@ -34,7 +34,7 @@ export class Api {
     });
   }
 
-  get(url: string, id: number): Promise<any> {
+  get(url: string, id?: number): Promise<any> {
 
     let headers = new HttpHeaders({
       'Content-Type': 'application/json'
@@ -42,7 +42,9 @@ export class Api {
 
     return new Promise((resolve, reject) => {
       this.http.get(
-        `${this.apiBase}${url}${id}`,
+        id
+          ? `${this.apiBase}${url}${id}`
+          : `${this.apiBase}${url}`,
         { headers, responseType: 'json' }
       ).subscribe(
         info => {
