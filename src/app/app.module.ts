@@ -11,6 +11,7 @@ import { HomeComponent } from './views/Home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ItemComponent } from './views/Item/item.component';
 import { CartComponent } from './views/Cart/cart.component';
+import { Api } from './helpers/ApiHelper';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import { CartComponent } from './views/Cart/cart.component';
     FontAwesomeModule,
     RouterModule,
   ],
-  providers: [],
+  providers: [Api],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

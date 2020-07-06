@@ -6,7 +6,8 @@ export default class Item {
     public name: String,
     public description: String,
     public price: String,
-    public imageUrl: String
+    public imageUrl: String,
+    public category: String,
   ) {
     this.id = Math.random();
     this.quantity = 1;
