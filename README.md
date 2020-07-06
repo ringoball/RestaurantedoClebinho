@@ -25,5 +25,5 @@ Com todas as dependências instaladas rode a aplicação
 ## Execução
  - Para garantir  o funcionamento correto da aplicação tenha certeza de que o servidor da aplicação esteja rodando simultaneamente [https://github.com/botinho141516/COM-222-Final](https://github.com/botinho141516/COM-222-Final)
 
- - Acesse http://localhost:4200 para acessar a aplicação
+ - Acesse http://localhost:4200 para acessar a aplicação.
 
