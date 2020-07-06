@@ -1,27 +1,12 @@
-# Trabalho Final COM222
+# Trabalho final de COM222 - front-end
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+# Guia
 
-## Development server
+## Instalação
+Digite npm install no path da pasta
+Com todas as dependências instaladas digite ng serve
+Tenha certeza de que o back esteja rodando, acesse esse link para o back: [https://github.com/botinho141516/COM-222-Final](https://github.com/botinho141516/COM-222-Final)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Configuração
+Digite localhost:4200 para acessar a página, caso seja administrador do restaurante clique no ícono do cardápio que está a direita do carrinho e coloque os itens para o dia, logo após isso apenas deixe o cliente escolher os itens e adicioná-los no carrinho.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
