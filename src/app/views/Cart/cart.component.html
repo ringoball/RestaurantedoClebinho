@@ -1,0 +1,33 @@
+<div class="page-container">
+  <div class="center-container">
+    <div class="title-container">
+      <i (click)="goBack()" class="fa">&#xf060;</i>
+      <span class="title">CARRINHO</span>
+    </div>
+    <div class="list-container">
+      <div *ngFor="let item of cart">
+        <div class="card">
+          <div class="item-quantity-container">
+            <i (click)="addOne(item)" class="fa">&#xf077;</i>
+            <span class="item-quantity-number">{{item.quantity}}</span>
+            <i (click)="removeOne(item)" class="fa">&#xf078;</i>
+          </div>
+          <div class="image-container">
+            <img src="../../../assets/{{item.imageUrl}}.jpg">
+          </div>
+          <div class="content-container">
+            <div class="content-description"><h4>{{item.name}}</h4></div>
+            <div class="content-price">R${{item.price}}</div>
+          </div>
+          <div class="content-remove">
+            <i (click)="removeItem(item)" class="fa">&#xf014;</i>
+          </div>
+        </div>
+      </div>
+      <div style="float:right; font-weight: bold;font-size: medium;">Total: R${{totalPrice.toFixed(2)}}</div>
+    </div>
+    <div class="button-container">
+      <div (click)="buy()" class="button"> Finalizar Compra </div>
+    </div>
+  </div>
+</div>

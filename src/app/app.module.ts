@@ -9,13 +9,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './views/Home/home.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ItemComponent } from './views/item/item.component';
+import { ItemComponent } from './views/Item/item.component';
+import { CartComponent } from './views/Cart/cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ItemComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,

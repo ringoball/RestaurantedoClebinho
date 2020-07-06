@@ -1,6 +1,9 @@
 body {
   overflow-x: unset;
 }
+/* * {
+  border:1px solid red;
+} */
 
 img {
   height:100px;
@@ -14,6 +17,7 @@ img {
   position: fixed;
   height:60px;
   width:100%;
+  display: flex;
   background-color: bisque;
   text-align: center;
   vertical-align: middle;
@@ -22,6 +26,25 @@ img {
   font-weight: 700;
   box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
 }
+.navbar-left {
+  margin:auto;
+}
+.navbar-middle {
+  margin:auto;
+  
+}
+.navbar-right {
+  margin:auto;
+}
+
+.icon-container {
+  padding:5px 10px;
+  cursor: pointer;
+}
+.icon-container:hover {
+  background-color:rgb(0,0,0,.1)
+}
+
 .page-container {
   display: flex;
   flex-direction: column;

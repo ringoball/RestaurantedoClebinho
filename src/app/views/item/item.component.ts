@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as Items from '../../classes/index'
 import Item from 'src/app/classes/Item';
+import * as Storage from '../../helpers/LocalStorage';
 
 @Component({
   selector: 'item-page',
@@ -19,7 +20,6 @@ export class ItemComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('sdfgdiuo');
   }
 
   goBack = async () => {
@@ -27,11 +27,13 @@ export class ItemComponent implements OnInit {
   }
 
   addToCart = async () => {
-    await this.router.navigate([''], {
-      queryParams: {
-        addedItem: this.item
-      }
-    });
+    const addition = Storage.addToCart(this.item);
+    if (addition) {
+      alert('Item adicionado com Sucesso');
+      this.goBack();
+    } else {
+      alert('Houve um erro ao adicionar o Item');
+    }
   }
 
 }
