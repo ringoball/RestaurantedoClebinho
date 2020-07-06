@@ -1,0 +1,150 @@
+body {
+  overflow-x: unset;
+}
+
+img {
+  height:100px;
+  width:auto;
+  margin: auto;
+}
+
+.navbar {
+  z-index:9999;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  height:60px;
+  width:100%;
+  display: flex;
+  background-color: bisque;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  box-shadow: 3px 5px 5px 0px rgba(0,0,0,0.75);
+}
+.navbar-left {
+  margin:auto;
+}
+.navbar-middle {
+  margin:auto;
+  
+}
+.navbar-right {
+  display: flex;
+  flex-direction: row;
+  margin:auto;
+}
+
+.icon-container {
+  padding:5px 10px;
+  cursor: pointer;
+}
+.icon-container:hover {
+  background-color:rgb(0,0,0,.1)
+}
+
+.page-container {
+  display:flex;
+  min-height: 100vh;
+  width:100%;
+  flex-direction: column;
+}
+
+.option-container {
+  border: 1px solid rgb(250, 248, 248);
+  border-radius: 4px;
+  width:60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin:50px auto;
+}
+
+.option-title {
+  display: flex;
+  border-bottom: 1px solid gray;
+  background-color: rgb(0,0,0,.03);
+  padding-left: 10px;
+  border-radius: 5px 5px 0 0;
+}
+
+
+i {
+  font-weight: 400;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.image-container {
+  border-radius: 5px;
+  margin:10px 0px;
+  height:80px;
+  width:auto;
+  max-width:120px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.list-container {
+  margin:40px 0;
+  height: fit-content;
+}
+.card {
+  padding:0 10px;
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  height:100px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  margin-bottom:30px;
+  box-shadow: -1px 15px 16px -8px rgba(0,0,0,0.71);
+  cursor:pointer;
+}
+
+.content-container {
+  width:100%;
+  padding:10px;
+  padding-right: 50px;
+}
+
+.content-description {
+  display: flex;
+}
+
+.content-toggle {
+  margin: auto;
+  padding:10px;
+}
+
+.limit-text {
+  margin: auto 20px;
+  vertical-align: middle;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width:100%;
+  height:45px;
+  color:rgb(82, 82, 82);
+  background-color: rgba(255, 228, 196, 0.849);
+  border-radius: 6px;
+  font-size: large;
+  font-weight: 500;
+  box-shadow: none;
+  bottom:0;
+  border:1px solid rgb(253, 223, 186);
+  box-shadow: -1px 15px 16px -8px rgba(0,0,0,0.71);
+}
