@@ -4,7 +4,9 @@
 
 ## Instalação
 Digite npm install no path da pasta
+
 Com todas as dependências instaladas digite ng serve
+
 Tenha certeza de que o back esteja rodando, acesse esse link para o back: [https://github.com/botinho141516/COM-222-Final](https://github.com/botinho141516/COM-222-Final)
 
 ## Configuração
