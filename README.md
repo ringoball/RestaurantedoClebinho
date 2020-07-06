@@ -1,14 +1,29 @@
-# Trabalho final de COM222 - front-end
+# Trabalho final de COM222 - Front-End
 
 # Guia
 
 ## Instalação
-Digite npm install no path da pasta
+ - Tenha instalado o Node
+ - Clone o repositório ou baixe os arquivos.
+ - Instale o cli do angular globalmente
+ ```shell 
+  npm i @angular/cli -g
+ ```
+ - Entre na pasta do projeto
+ - Instale suas dependências
 
-Com todas as dependências instaladas digite ng serve
+ ```shell 
+  npm i
+ ```
 
-Tenha certeza de que o back esteja rodando, acesse esse link para o back: [https://github.com/botinho141516/COM-222-Final](https://github.com/botinho141516/COM-222-Final)
+Com todas as dependências instaladas rode a aplicação
 
-## Configuração
-Digite localhost:4200 para acessar a página, caso seja administrador do restaurante clique no ícone do cardápio que está a direita do carrinho e coloque os itens para o dia, logo após isso apenas deixe o cliente escolher os itens e adicioná-los no carrinho.
+ ```shell 
+  npm start
+ ```
+
+## Execução
+ - Para garantir  o funcionamento correto da aplicação tenha certeza de que o servidor da aplicação esteja rodando simultaneamente [https://github.com/botinho141516/COM-222-Final](https://github.com/botinho141516/COM-222-Final)
+
+ - Acesse http://localhost:4200 para acessar a aplicação.
 
