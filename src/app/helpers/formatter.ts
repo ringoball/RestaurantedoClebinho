@@ -23,16 +23,42 @@ export const formatPedido = (cart, valorTotal) => {
     }
   });
 
-  console.log({
-    refeicoes,
-    bebida,
-    sobremesa,
-    valorTotal
-  })
   return {
     refeicoes,
     bebida,
     sobremesa,
     valorTotal
+  }
+}
+
+
+export const formatMenu = (menu) => {
+  const principal = [];
+  const carne = [];
+  const acompanhamento = [];
+
+  Object.keys(menu).forEach((category) => {
+    menu[category].forEach((item) => {
+      switch (item.category) {
+        case 'principal':
+          principal.push(item.name);
+          break;
+        case 'carnes':
+          carne.push(item.name);
+          break;
+        case 'acompanhamentos':
+          acompanhamento.push(item.name);
+          break;
+        default:
+          console.log('errrooo')
+          break;
+      }
+    })
+
+  });
+  return {
+    principal,
+    carne,
+    acompanhamento
   }
 }

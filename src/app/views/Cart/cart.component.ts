@@ -13,7 +13,7 @@ export class CartComponent implements OnInit {
   cart = [];
   totalPrice = 0;
   constructor(private router: Router, private api: Api) {
-    this.cart = this.unifyCart(Storage.getCart());
+    this.cart = this.unifyCart(Storage.cart.get());
     this.totalPrice = this.cart.reduce((acc, curr) => acc + +curr.price * curr.quantity, 0);
     console.log(this.cart);
   }
@@ -45,7 +45,7 @@ export class CartComponent implements OnInit {
       }
       return cartItem;
     });
-    Storage.setCart(this.cart);
+    Storage.cart.setCart(this.cart);
   }
 
   removeItem = (item) => {
@@ -56,7 +56,7 @@ export class CartComponent implements OnInit {
       }
       return true;
     });
-    Storage.deleteItem(item.id);
+    Storage.cart.deleteItem(item.id);
   }
 
 
@@ -64,7 +64,7 @@ export class CartComponent implements OnInit {
     try {
       const response = await this.api.post('/pedido', formatPedido(this.cart, this.totalPrice));
       if (response.statusCode === 200) {
-        if (Storage.clearCart()) {
+        if (Storage.cart.clearCart()) {
           alert('Pedido feito com sucesso');
           await this.router.navigate(['']);
         } else {

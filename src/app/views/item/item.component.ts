@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as Items from '../../classes/index'
-import Item from 'src/app/classes/Item';
+import Item from 'src/app/classes/Items/Item';
 import * as Storage from '../../helpers/LocalStorage';
 
 @Component({
@@ -27,7 +27,7 @@ export class ItemComponent implements OnInit {
   }
 
   addToCart = async () => {
-    const addition = Storage.addToCart(this.item);
+    const addition = Storage.cart.add(this.item);
     if (addition) {
       alert('Item adicionado com Sucesso');
       this.goBack();

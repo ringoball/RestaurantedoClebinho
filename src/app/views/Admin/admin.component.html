@@ -1,0 +1,88 @@
+<nav>
+  <div class="navbar">
+    <div class="navbar-left icon-container">
+      <i (click)="goBack()" class="fa">&#xf060;</i>
+    </div>
+    <span class="navbar-middle">
+      Não mexa aqui se você não for Administrador :)
+    </span>
+    <div class="navbar-right">
+    </div>
+  </div>
+</nav>
+
+<!-- Refeição -->
+<div class="page-container">
+  <h1 style="text-align:center;font-weight: 400;">Monte o cardápio do dia</h1>
+  <div class="option-container">
+    <div class="option-title">
+      <h1 style="font-weight: 400;">Principal</h1>
+    </div>
+    <div class="list-container">
+      <div *ngFor="let item of principal">
+        <div (click)="toggleOnMenu(item)" class="card">
+          <div class="image-container">
+            <img src="../../../assets/{{item.imageUrl}}.jpg">
+          </div>
+          <div class="content-container">
+            <div class="content-description">
+              <h4>{{item.name}}</h4>
+            </div>
+          </div>
+          <div class="content-toggle">
+            <i *ngIf="item.isChecked" class="fa">&#xf046;</i>
+            <i *ngIf="!item.isChecked" class="fa">&#xf096;</i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="option-title">
+      <h1 style="font-weight: 400;">Carnes</h1>
+    </div>
+    <div class="list-container">
+      <div *ngFor="let item of carnes">
+        <div (click)="toggleOnMenu(item)" class="card">
+          <div class="image-container">
+            <img src="../../../assets/{{item.imageUrl}}.jpg">
+          </div>
+          <div class="content-container">
+            <div class="content-description">
+              <h4>{{item.name}}</h4>
+            </div>
+          </div>
+          <div class="content-toggle">
+          <i *ngIf="item.isChecked" class="fa">&#xf046;</i>
+          <i *ngIf="!item.isChecked" class="fa">&#xf096;</i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="option-title">
+      <h1 style="font-weight: 400;">Acompanhamentos</h1>
+    </div>
+    <div class="list-container">
+      <div *ngFor="let item of acompanhamentos">
+        <div (click)="toggleOnMenu(item)" class="card">
+          <div class="image-container">
+            <img src="../../../assets/{{item.imageUrl}}.jpg">
+          </div>
+          <div class="content-container">
+            <div class="content-description">
+              <h4>{{item.name}}</h4>
+            </div>
+          </div>
+          <div class="content-toggle">
+            <i *ngIf="item.isChecked" class="fa">&#xf046;</i>
+            <i *ngIf="!item.isChecked" class="fa">&#xf096;</i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="button-container">
+  <div (click)="setDayMenu()" class="button"> Definir Cardápio </div>
+</div>
+
+
