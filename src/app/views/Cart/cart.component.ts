@@ -74,7 +74,7 @@ export class CartComponent implements OnInit {
         throw new Error('Erro ao fazer a requisição');
       }
     } catch ({ message }) {
-      alert('Erro ao fazer o pedido', message);
+      alert(`Erro ao fazer o pedido ${message}`);
     }
   }
 

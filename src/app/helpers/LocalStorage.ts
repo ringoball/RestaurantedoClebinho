@@ -58,7 +58,7 @@ export const setCart = (newCart) => {
 }
 export const clearCart = () => {
   try {
-    localStorage.setItem('cart', [])
+    localStorage.removeItem('cart');
     return true;
   } catch (err) {
     return false;
