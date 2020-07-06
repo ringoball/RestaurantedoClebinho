@@ -24,8 +24,7 @@ export const addToCart = (data): boolean => {
 
 export const getCart = (): Array<Item> => {
   try {
-
-    if (localStorage.getItem('cart')) {
+    if (JSON.parse(localStorage.getItem('cart'))) {
       return JSON.parse(localStorage.getItem('cart'));
     } else {
       return [];
@@ -52,6 +51,14 @@ export const deleteItem = (id: number): boolean => {
 export const setCart = (newCart) => {
   try {
     localStorage.setItem('cart', JSON.stringify(newCart))
+    return true;
+  } catch (err) {
+    return false;
+  }
+}
+export const clearCart = () => {
+  try {
+    localStorage.removeItem('cart');
     return true;
   } catch (err) {
     return false;

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as Storage from '../../helpers/LocalStorage';
+import { Api } from 'src/app/helpers/ApiHelper';
+import { formatPedido } from 'src/app/helpers/formatter';
 
 @Component({
   selector: 'cart-page',
@@ -8,11 +10,12 @@ import * as Storage from '../../helpers/LocalStorage';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-  cart;
+  cart = [];
   totalPrice = 0;
-  constructor(private router: Router) {
+  constructor(private router: Router, private api: Api) {
     this.cart = this.unifyCart(Storage.getCart());
     this.totalPrice = this.cart.reduce((acc, curr) => acc + +curr.price * curr.quantity, 0);
+    console.log(this.cart);
   }
 
   ngOnInit(): void {
@@ -57,8 +60,22 @@ export class CartComponent implements OnInit {
   }
 
 
-  buy = () => {
-
+  buy = async () => {
+    try {
+      const response = await this.api.post('/pedido', formatPedido(this.cart, this.totalPrice));
+      if (response.statusCode === 200) {
+        if (Storage.clearCart()) {
+          alert('Pedido feito com sucesso');
+          await this.router.navigate(['']);
+        } else {
+          throw new Error('Não foi possivel esvaziar o carrinho');
+        }
+      } else {
+        throw new Error('Erro ao fazer a requisição');
+      }
+    } catch ({ message }) {
+      alert(`Erro ao fazer o pedido ${message}`);
+    }
   }
 
   unifyCart = (cart) => {
