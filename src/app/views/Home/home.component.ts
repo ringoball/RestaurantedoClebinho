@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Cardapio } from '../../interfaces/Cardapio';
-import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'home-page',
@@ -9,22 +8,30 @@ import { Router } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  cart;
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+  ) { }
+
+  ngOnInit(): void {
+  }
 
   showDetails = async (item) => {
     await this.router.navigate(['item'], {
       queryParams: {
         item,
       }
-    })
+    });
+  }
+
+  viewCart = async () => {
+    await this.router.navigate(['cart']);
   }
 
   chooseMeal = () => {
     console.log('meal');
   }
 
-  ngOnInit(): void {
-  }
 
 }

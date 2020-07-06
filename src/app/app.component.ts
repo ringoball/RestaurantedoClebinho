@@ -11,8 +11,7 @@ export class AppComponent {
   constructor(private router: Router) { }
 
   showDetails = async (page) => {
-    console.log(page)
-    await this.router.navigate(['item'], {
+    this.router.navigate(['item'], {
       queryParams: {
         page,
       }
